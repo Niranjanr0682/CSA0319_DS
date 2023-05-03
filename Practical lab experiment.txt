@@ -1,0 +1,19 @@
+    1  .odd even count
+    2  .factorial with recursion
+    3  .factorial without recursion 
+    4  .fibonacci without recursion
+    5  .fibonacci with recursion
+    6  .2d matrix multiplication
+    7  .linear search
+    8  .binary search
+    9  .bubble sort 
+    10 .insertion sort
+    11 .insertion of element in array
+    12 .deletion of element in arrary 
+    13 .merge sort
+    14 .quick sort
+    15 .stack operation
+    16 .queue operation
+    17 .stack infix to postfix
+    18 .stack postfix to expression
+    
