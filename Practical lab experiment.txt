@@ -1,6 +1,6 @@
     1  .odd even count
-    2  .factorial with recursion
-    3  .factorial without recursion 
+    2  .factorial without recursion
+    3  .factorial with recursion 
     4  .fibonacci without recursion
     5  .fibonacci with recursion
     6  .2d matrix multiplication
@@ -16,4 +16,3 @@
     16 .queue operation
     17 .stack infix to postfix
     18 .stack postfix to expression
-    
