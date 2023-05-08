@@ -32,7 +32,7 @@ int priority(char c)
 } 
 
 
-main()
+int main()
 {
 	char in[50],post[50],ch;
 	int i,j,l;

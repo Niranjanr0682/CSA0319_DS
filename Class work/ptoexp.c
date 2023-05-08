@@ -9,7 +9,7 @@ void push(int val)
     {stk[++top] = val;}
 int pop()
     {return(stk[top--]);}
-main()
+int main()
 {
 	int op1,op2,len,result,i;
 	char postfix[30],op;
