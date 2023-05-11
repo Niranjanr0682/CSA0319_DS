@@ -417,7 +417,7 @@ int main()
 			"linked list\n");
 		printf("\t12 Search an element in linked list\n");
 		printf("\t13 To exit\n");
-		printf("\nEnter Choice :\n");
+		printf("\nEnter Choice : ");
 		scanf("%d", &choice);
 
 		switch (choice) {
