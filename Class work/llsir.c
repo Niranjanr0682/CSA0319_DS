@@ -134,6 +134,49 @@ void deleteatpos()
 	printf("the element %d at position %d is successfully deleted",ele,pos);
 }
 
+void eocount()
+{
+	int o=0,e=0;
+	for(p=head;p->next!=NULL;p=p->next)
+	{if (p->data%2==0)
+		e++;
+	else
+		o++;}
+	printf("the even count = %d",e);
+	printf("the odd count = %d",o);
+}
+
+void sum()
+{
+	int s=0;
+	for(p=head;p!=NULL;p=p->next)
+	{s=s+p->data;}
+	printf("the sum of the elements is %d",s);
+}
+
+void product()
+{
+	int m=1;
+	for(p=head;p!=NULL;p=p->next)
+	{m=m*p->data;}
+	printf("the product of the elements is %d",m);
+}
+
+void oddprint()
+{
+	int op=1;
+	for(op,p=head;p!=NULL;op++,p=p->next)
+	{if (op%2!=1)
+	{printf("%d\t ",p->data);}}
+}
+void evenprint()
+{
+	int ev=1;
+	for(ev,p=head;p!=NULL;ev++,p=p->next)
+	{if (ev%2!=0)
+	{printf("%d\t ",p->data);}}
+}
+
 
 int main()
 {
@@ -148,7 +191,12 @@ int main()
         printf("\n 6. Delete_at_begin");
 		printf("\n 7. Delete_at_end");
 		printf("\n 8. Delete_at_anyposition");
-        printf("\n 9. exit");
+		printf("\n 9. odd even count");
+		printf("\n10. sum of elements in list");
+		printf("\n11. product of elements in list");
+		printf("\n12. print odd elements in list");
+		printf("\n13. print even elements in list");
+        printf("\n14. exit");
         printf("\n enter your choice : ");
         scanf("%d",&choice);
         switch(choice)
@@ -169,10 +217,20 @@ int main()
 			break;
 			case 8:deleteatpos();
 			break;
-            case 9:exit(0);
+			case 9:eocount();
+			break;
+			case 10:sum();
+			break;
+			case 11:product();
+			break;
+			case 12:oddprint();
+			break;
+			case 13:evenprint();
+			break;
+            case 14:exit(0);
             printf("enter the correct choice");
             break;
         }
     }
-    while(choice>=1 && choice<=9);
+    while(choice>=1 && choice<=14);
 }
