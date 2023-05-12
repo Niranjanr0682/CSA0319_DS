@@ -125,7 +125,13 @@ void deleteatpos()
 	scanf("%d",&ele);
 	printf("\nenter the position : ");
 	scanf("%d",&pos);
-	
+	for(p=head,i=1;i<pos;i++,p=p->next)
+		{t=p;}
+	ele=p->data;
+	t->next=p->next;
+	free(p);
+	p=t;
+	printf("the element %d at position %d is successfully deleted",ele,pos);
 }
 
 
