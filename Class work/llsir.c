@@ -94,25 +94,39 @@ void Insert_at_anyposition()
 	newnode->next=p;
 	p=newnode;
 }
+
 void deleteatbeg()
-{int ele;
-p=head;
-ele=p->data;
-head=p->next;
-free(p);
-p=head;
-printf("the deleted element is %d.",ele);
+{
+	int ele;
+	p=head;
+	ele=p->data;
+	head=p->next;
+	free(p);
+	p=head;
+	printf("the deleted element is %d.",ele);
 }
 
 void deleteatend()
-{int ele;
-for(p=head;p->next!=NULL;p=p->next)
-t=p;
-ele = p->data;
-t->next=NULL;
-free(p);
-p=t;
-printf("the deleted element is %d",ele);}
+{
+	int ele;
+	for(p=head;p->next!=NULL;p=p->next)
+	t=p;
+	ele = p->data;
+	t->next=NULL;
+	free(p);
+	p=t;
+	printf("the deleted element is %d",ele);
+}
+
+void deleteatpos()
+{
+	int i,ele,pos;
+	printf("\nenter the element : ");
+	scanf("%d",&ele);
+	printf("\nenter the position : ");
+	scanf("%d",&pos);
+	
+}
 
 
 int main()
@@ -120,14 +134,15 @@ int main()
     int choice;
     do{
         printf("\n****THE MAIN MENU ****\n");
-        printf("\n 1.create");
+        printf("\n 1. create");
         printf("\n 2. Display");
         printf("\n 3. Insert_at_begin");
         printf("\n 4. Insert_at_end");
         printf("\n 5. Insert_at_anyposition");
         printf("\n 6. Delete_at_begin");
 		printf("\n 7. Delete_at_end");
-        printf("\n 8. exit");
+		printf("\n 8. Delete_at_anyposition");
+        printf("\n 9. exit");
         printf("\n enter your choice : ");
         scanf("%d",&choice);
         switch(choice)
@@ -146,10 +161,12 @@ int main()
             break;
 			case 7:deleteatend();
 			break;
-            case 8:exit(0);
+			case 8:deleteatpos();
+			break;
+            case 9:exit(0);
             printf("enter the correct choice");
             break;
         }
     }
-    while(choice>=1 && choice<=8);
+    while(choice>=1 && choice<=9);
 }
