@@ -104,6 +104,15 @@ p=head;
 printf("the deleted element is %d.",ele);
 }
 
+void deleteatend()
+{int ele;
+for(p=head;p->next!=NULL;p=p->next)
+t=p;
+ele = p->data;
+t->next=NULL;
+free(p);
+p=t;
+printf("the deleted element is %d",ele);}
 
 
 int main()
@@ -117,8 +126,9 @@ int main()
         printf("\n 4. Insert_at_end");
         printf("\n 5. Insert_at_anyposition");
         printf("\n 6. Delete_at_begin");
-        printf("\n 7. exit");
-        printf("\n enter your choice:");
+		printf("\n 7. Delete_at_end");
+        printf("\n 8. exit");
+        printf("\n enter your choice : ");
         scanf("%d",&choice);
         switch(choice)
         {
@@ -134,10 +144,12 @@ int main()
             break;
             case 6:deleteatbeg();
             break;
-            case 7:exit(0);
+			case 7:deleteatend();
+			break;
+            case 8:exit(0);
             printf("enter the correct choice");
             break;
         }
     }
-    while(choice>=1 && choice<=7);
+    while(choice>=1 && choice<=8);
 }
